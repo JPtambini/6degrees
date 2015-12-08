@@ -1,0 +1,57 @@
+body {
+  width: 100%;
+  background-image: url("/images/Red.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: black; }
+
+#logo {
+  margin-top: 200px;
+  margin-left: 40%; }
+
+#star-header {
+  text-align: center; }
+
+#actor-form {
+  color: white;
+  width: 35%;
+  display: block;
+  margin: 0 auto; }
+  #actor-form form input {
+    margin-left: 10px; }
+
+.all-degrees {
+  width: 90%;
+  margin: 0 auto; }
+  .all-degrees .star {
+    width: 25%;
+    height: 275px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(http://cliparts.co/cliparts/6cy/5zM/6cy5zMqzi.png);
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .all-degrees .movie {
+    background-image: url(http://www.vangeva.com/wp-content/uploads/2012/01/Old-Movie-Poster-left.jpg);
+    background-size: cover;
+    width: 25%;
+    height: 275px; }
+
+#star1, #star2, #star3, #star4, #star5 {
+  display: block;
+  margin-top: 20%; }
+
+#movie-img1, #movie-img2, #movie-img3, #movie-img4, #movie-img5 {
+  position: relative;
+  left: 75%;
+  border-radius: 10px;
+  margin-top: 20%; }
+
+#star6, #star1 {
+  margin: 0 auto;
+  margin-top: 20%;
+  margin-bottom: 15%; }
+
+/*# sourceMappingURL=home.css.map */

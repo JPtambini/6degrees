@@ -1,0 +1,106 @@
+
+<head>
+	<title>6° of Seperation</title>
+	<link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+	<div id="logo">
+		<img src="/images/logo1.png">	
+	</div>
+	<br>
+	<br>
+	<br>
+	<div id="actor-form">
+		<form name="main" method="get">
+			Actor 1: <input type="text" name="actor1" placeholder="Kevin Bacon"/>
+			Actor 2: <input type="text" name="actor2" placeholder="John Travolta" />
+			<button>Submit</button>
+		</form>
+	</div>
+	<br>
+	<br>
+
+
+
+	<div class="all-degrees">
+		<%= @connections["link"]  %>
+
+		<div class="degree-of-sep">
+			<% @connections["link"].each do |s| %>
+			<div id="star1" class="star">
+				<h1 id = "star-header">
+					<%= s %>
+				</h1>
+			</div>
+			<% end %>
+			<br>
+			<br>
+			<br>
+			<div class="movie-right">
+				<div id="movie-img1" class="movie"> 
+					<h1><%= @connections["link"][1] %></h1>
+				</div>
+			</div>
+		</div>
+		<!-- <br>
+		<br>
+		<div class="degree-of-sep">
+			<div id="star2" class="star">
+				<%= @connections["link"][2] %>
+			</div>
+			<br>
+			<br>
+			<div class="movie-right">
+				<div id="movie-img2" class="movie">
+					<%= @connections["link"][3] %>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="degree-of-sep">
+			<div id="star3" class="star">
+				<%= @connections["link"][4] %>
+			</div>
+			<br>
+			<br>
+			<div class="movie-right">
+				<div id="movie-img3" class="movie">
+					<%= @connections["link"][5] %>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="degree-of-sep">
+			<div id="star4" class="star">
+				<%= @connections["link"][6] %>
+			</div>
+			<br>
+			<br>
+			<div class="movie-right">
+				<div id="movie-img4" class="movie">
+					<%= @connections["link"][7] %>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="degree-of-sep">
+			<div id="star5" class="star">
+				<%= @connections["link"][8] %>
+			</div>
+			<br>
+			<br>
+			<div class="movie-right">
+				<div id="movie-img5" class="movie">
+					<%= @connections["link"][9] %>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div id="star6" class="star"> <%= @actor1 %></div>
+	</div> -->
+</body>
