@@ -7,6 +7,8 @@ get "/" do
 	#setting variables
 	@actor1 =  params[:actor1] || "kevin bacon"
 	@actor2 =  params[:actor2] || "john travolta (I)"
+	#numb is the number of values in the link key
+	@numb = 0.upto(@connections["link"].length)
 	#substituting space for plus sign
 	@actor1.to_s.gsub(' ','+')
 	@actor2.to_s.gsub(' ','+')
@@ -22,8 +24,5 @@ get "/" do
 	#link is the degrees of seperation
 
 	#status is if it was succesfull, if theres a spelling error or multiple actors with same name
-	@connections["link"].each do |s|
-		puts s
-	end
 	erb :home
 end
