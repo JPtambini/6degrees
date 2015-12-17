@@ -10,6 +10,18 @@ body {
   margin-top: 200px;
   margin-left: 40%; }
 
+#movie_poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px; }
+
+#actor_poster {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  margin-left: 20%;
+  margin-top: 10px; }
+
 #star-header {
   text-align: center; }
 
@@ -34,16 +46,25 @@ body {
     background-size: cover;
     background-repeat: no-repeat; }
   .all-degrees .movie {
-    background-image: url(http://www.vangeva.com/wp-content/uploads/2012/01/Old-Movie-Poster-left.jpg);
     background-size: cover;
-    width: 25%;
-    height: 275px; }
+    width: 20%;
+    height: 350px; }
 
-#star1, #star2, #star3, #star4, #star5 {
+#star2 {
   display: block;
   margin-top: 20%; }
 
-#movie-img1, #movie-img2, #movie-img3, #movie-img4, #movie-img5 {
+#with {
+  text-align: center;
+  margin-top: 250px;
+  margin-bottom: 50px; }
+
+#wasin {
+  text-align: center;
+  margin-top: 250px;
+  margin-bottom: 50px; }
+
+#movie-img1 {
   position: relative;
   left: 75%;
   border-radius: 10px;

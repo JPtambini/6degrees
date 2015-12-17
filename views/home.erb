@@ -4,6 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
+
 	<div id="logo">
 		<img src="/images/logo1.png">	
 	</div>
@@ -19,95 +20,36 @@
 	</div>
 	<br>
 	<br>
-
-
-
 	<div class="all-degrees">
 		<div class="degree-of-sep">
-			
-			<div id="star1" class="star">
-				<h1 id = "star-header">
-				</h1>
+			<br>
+			<br>
+			<br>
+		</div>
+		<br>
+		<br>
+		<div class="degree-of-sep">				
+				<% @connect.each do |link| %>
+			<div id="star2" class="star">
+				<h1><%= link[0] %></h1>
+				<img src=" <%="https://image.tmdb.org/t/p/original"+link[2]  %>" /id="actor_poster">
+			</div>	
+			<div>
+				<p id = "wasin" >WAS IN</p>
 			</div>
-			
-
-
-			<br>
-			<br>
-			<br>
 			<div class="movie-right">
 				<div id="movie-img1" class="movie"> 
-					<h1></h1>
+					<img  src="<%="https://image.tmdb.org/t/p/original"+link[3] %>" /id= "movie_poster">
+					<h2><%= link[1] %></h2>
 				</div>
-			</div>
-		</div>
-		<br>
-		<br>
-		<div class="degree-of-sep">
-			<% @connections["link"].each do |s| %>
-			<div id="star2" class="star">
-				<% @connections["link"].select.with_index { |actor, index| index % 2 == 0}.each do |act| %>
-				<%= act %>
+				<p id="with">WITH</p>
 				<% end %>
-
-					
-					
 			</div>
-			<% end %>
-			<!--
-			<br>
-			<br>
-			<div class="movie-right">
-				<div id="movie-img2" class="movie">
-					<%= @connections["link"][3] %>
-				</div>
+			<div id="star1" class="star">
+				<h1><%= @actor1 %></h1>
+				<img src="<% "https://image.tmdb.org/t/p/original"+"/#{@A1}" %>">
+				<h1><%= "https://image.tmdb.org/t/p/original"+"/#{@A1}" %></h1>
 			</div>
 		</div>
-		<br>
-		<br>
-		<div class="degree-of-sep">
-			<div id="star3" class="star">
-				<%= @connections["link"][4] %>
-			</div>
-			<br>
-			<br>
-			<div class="movie-right">
-				<div id="movie-img3" class="movie">
-					<%= @connections["link"][5] %>
-				</div>
-			</div>
-		</div>
-		<br>
-		<br>
-		<div class="degree-of-sep">
-			<div id="star4" class="star">
-				<%= @connections["link"][6] %>
-			</div>
-			<br>
-			<br>
-			<div class="movie-right">
-				<div id="movie-img4" class="movie">
-					<%= @connections["link"][7] %>
-				</div>
-			</div>
-		</div>
-		<br>
-		<br>
-		<div class="degree-of-sep">
-			<div id="star5" class="star">
-				<%= @connections["link"][8] %>
-			</div>
-			<br>
-			<br>
-			<div class="movie-right">
-				<div id="movie-img5" class="movie">
-					<%= @connections["link"][9] %>
-				</div>
-			</div>
-		</div>
-		<br>
-		<br>
-		<br>
-		<div id="star6" class="star"> <%= @actor1 %></div> -->
 	</div>
 </body>
