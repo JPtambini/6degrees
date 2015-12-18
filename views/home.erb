@@ -2,12 +2,14 @@
 <head>
 	<title>6° of Seperation</title>
 	<link rel="stylesheet" type="text/css" href="home.css">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/arc-old-standart" type="text/css"/>
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/ballpoint-pen" type="text/css"/>
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/dotrice" type="text/css"/>
 </head>
 <body>
-
-	<div id="logo">
-		<img src="/images/logo1.png">	
-	</div>
+	
+		<div id="logo">	
+		</div>
 	<br>
 	<br>
 	<br>
@@ -30,14 +32,14 @@
 		<br>
 		<div class="degree-of-sep">				
 				<% @connect.each do |link| %>
-			<div id="star2" class="star">
+			<div id="star" class="star">
 				<h1><%= link[0] %></h1>
 				<img src=" <%="https://image.tmdb.org/t/p/original"+link[2]  %>" /id="actor_poster">
 			</div>	
 			<div>
-				<p id = "wasin" >WAS IN</p>
+				<p id = "wasin" >WHO WAS IN</p>
 			</div>
-			<div class="movie-right">
+			<div>
 				<div id="movie-img1" class="movie"> 
 					<img  src="<%="https://image.tmdb.org/t/p/original"+link[3] %>" /id= "movie_poster">
 					<h2><%= link[1] %></h2>
@@ -47,8 +49,10 @@
 			</div>
 			<div id="star1" class="star">
 				<h1><%= @actor1 %></h1>
-				<img src="<% "https://image.tmdb.org/t/p/original"+"/#{@A1}" %>">
-				<h1><%= "https://image.tmdb.org/t/p/original"+"/#{@A1}" %></h1>
+				
+				<% ActorA=RestClient.get("http://api.themoviedb.org/3/search/person?api_key=8a6476299c496ff49fa6e273f21689c6&query="+"/#{@A1}") %>
+				<% actor1img = JSON.parse(ActorA)["results"][0]["profile_path"] %>
+				<img src="<%="https://image.tmdb.org/t/p/original"+actor1img %>"/id="bottom_pic">
 			</div>
 		</div>
 	</div>

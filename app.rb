@@ -7,8 +7,8 @@ get "/" do
 	@actor1 =  params[:actor1] || "kevin bacon"
 	@actor2 =  params[:actor2] || "john travolta (I)"
 	#substituting space for plus sign
-	A1 =@actor1.to_s.gsub(' ','+')
-	A2 =@actor2.to_s.gsub(' ','+')
+	@A1 =@actor1.to_s.gsub(' ','+')
+	@A2 =@actor2.to_s.gsub(' ','+')
 	#sending information to address where json file comes from
 	connection_url = "http://oracleofbacon.org/cgi-bin/json?enc=utf-8&p=jpt10221984&a=#{@actor1}&b=#{@actor2}&u=1&rt=1&sy=1850&ey=2050&gm=0xef3ef7f&dir=0&co="
 	movie_poster_url = "http://api.themoviedb.org/3/search/movie?api_key=8a6476299c496ff49fa6e273f21689c6&query=true+lies"
